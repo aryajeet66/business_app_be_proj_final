@@ -38,7 +38,7 @@ const Form = () => {
 
     const cusine = ['Cantonese', 'Afghan', 'Ice Cream', 'Italian', 'Continental', 'British', 'Mughlai', 'Grill', 'Burmese', 'Korean', 'Healthy Food', 'Tibetan', 'Bakery', 'French', 'Vietnamese', 'South Indian', 'Wraps', 'Burger', 'Desserts', 'South American', 'Biryani', 'Hyderabadi', 'Seafood', 'North Eastern', 'European', 'Mongolian', 'Filipino', 'Tex-Mex', 'Lebanese', 'Cafe Food', 'Juices', 'Tea', 'Momos', 'Assamese', 'Spanish', 'Gujarati', 'Falafel', 'Bohri', 'Mediterranean', 'Indian', 'Steak', 'Japanese', 'Mexican', 'Parsi', 'Charcoal Chicken', 'Maharashtrian', 'Bengali', 'Bihari', 'Portuguese', 'Frozen Yogurt', 'Mangalorean', 'Pizza', 'Kashmiri', 'American', 'Mithai', 'Awadhi', 'Lucknowi', 'Asian', 'Deli', 'Street Food', 'Chinese', 'Turkish', 'BBQ', 'Indonesian', 'Beverages', 'Coffee', 'Cafe', 'Roast Chicken', 'Salad', 'Rajasthani', 'Sindhi', 'Konkan', 'Singaporean', 'Kerala', 'Modern Indian', 'Arabian', 'Andhra', 'Malwani', 'Thai', 'Sushi', 'Finger Food', 'Malaysian', 'Chettinad', 'Rolls', 'Paan', 'Greek', 'Iranian', 'Goan', 'Middle Eastern', 'North Indian', 'Sandwich', 'Kebab', 'Oriya', 'German', 'Bubble Tea', 'Bar Food', 'Brazilian', 'Nepalese', 'Fast Food']
 
-    const   location = ['Pune', 'FC Road', 'Shivaji Nagar', 'Baner', 'Koregaon Park', 'Viman Nagar', 'Senapati Bapat Road', 'Kalyani Nagar', 'Kothrud', 'Pimple Saudagar', 'Dhankawadi', 'Aundh', 'Hinjawadi', 'Pimpri', 'Katraj', 'Mundhwa', 'Sinhgad Road', 'Magarpatta', 'Wakad', 'Wagholi', 'Kharadi', 'Bibvewadi', 'Kondhwa', 'Nigdi', 'Ravet', 'Erandwane', 'Sadashiv Peth', 'Chinchwad', 'Wadgaon Sheri', 'Narhe', 'Camp Area', 'Wanowrie', 'Karve Nagar', 'NIBM Road', 'Hadapsar', 'Pimple Nilakh', 'Bavdhan', 'Pashan', 'Yerawada', 'Pimple Gurav', 'Balewadi', 'Salunkhe Vihar Road', 'Warje', 'Bhosari', 'Chandan Nagar', 'Lohegaon', 'Pune-Solapur Road', 'Dhanori', 'Vishrantwadi', 'Akurdi']
+    const location = ['Pune', 'FC Road', 'Shivaji Nagar', 'Baner', 'Koregaon Park', 'Viman Nagar', 'Senapati Bapat Road', 'Kalyani Nagar', 'Kothrud', 'Pimple Saudagar', 'Dhankawadi', 'Aundh', 'Hinjawadi', 'Pimpri', 'Katraj', 'Mundhwa', 'Sinhgad Road', 'Magarpatta', 'Wakad', 'Wagholi', 'Kharadi', 'Bibvewadi', 'Kondhwa', 'Nigdi', 'Ravet', 'Erandwane', 'Sadashiv Peth', 'Chinchwad', 'Wadgaon Sheri', 'Narhe', 'Camp Area', 'Wanowrie', 'Karve Nagar', 'NIBM Road', 'Hadapsar', 'Pimple Nilakh', 'Bavdhan', 'Pashan', 'Yerawada', 'Pimple Gurav', 'Balewadi', 'Salunkhe Vihar Road', 'Warje', 'Bhosari', 'Chandan Nagar', 'Lohegaon', 'Pune-Solapur Road', 'Dhanori', 'Vishrantwadi', 'Akurdi']
 
     const [showConfirmation, setShowConfirmation] = useState(false);
 
@@ -96,7 +96,7 @@ const Form = () => {
         return (
             <div id="pdfContent" className='confirmation'>
                 <h1 className='hHeader'>Confirmation</h1>
-                <p>Location: {selectedOption}</p> 
+                <p>Location: {selectedOption}</p>
                 <p>Area: {formData.area}</p>
                 <p>Parking Info: {formData.parkingInfo}</p>
                 <p>Cuisine: {selectedOption2}</p>
@@ -104,7 +104,7 @@ const Form = () => {
                 <p>Fixed Capital: {formData.fixedCapital}</p>
                 <p>Variable Capital: {formData.variableCapital}</p>
                 <p>Franchise Info: {formData.franchiseInfo}</p>
-                {/* <button id="previousButton" className='pButton' onClick={lastPrevStep}>Previous</button> */}
+                <button id="previousButton" className='pButton' onClick={lastPrevStep}>Previous</button>
                 <button id="downloadButton" className='pButton' onClick={downloadPDF}>Download</button>
                 <button id="lgButton" className='logoutButton' onClick={handleLogout}>Logout</button>
             </div>
@@ -173,24 +173,24 @@ const Form = () => {
                 <div className='cInfo'>
                     <h1 className='hHeader'>Cuisine and Kitchen Type</h1>
                     <div className="inputs">
-                    <button className="nButton" onClick={toggleDropdown}>
-                        <img className='imgDrop' src='https://img.icons8.com/?size=100&id=26139&format=png&color=000000' alt='dd'>
-                        </img>
-                        {selectedOption2}
-                    </button>
-                    {isOpen && (
-                        <ul className="dropdown-menu">
-                            {cusine.map((option, index) => (
-                                <li
-                                    key={index}
-                                    className="dropdown-item"
-                                    onClick={() => handleOptionClick2(option)}
-                                >
-                                    {option}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                        <button className="nButton" onClick={toggleDropdown}>
+                            <img className='imgDrop' src='https://img.icons8.com/?size=100&id=26139&format=png&color=000000' alt='dd'>
+                            </img>
+                            {selectedOption2}
+                        </button>
+                        {isOpen && (
+                            <ul className="dropdown-menu">
+                                {cusine.map((option, index) => (
+                                    <li
+                                        key={index}
+                                        className="dropdown-item"
+                                        onClick={() => handleOptionClick2(option)}
+                                    >
+                                        {option}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                         <div className="input">
                             <input
                                 type="text"
