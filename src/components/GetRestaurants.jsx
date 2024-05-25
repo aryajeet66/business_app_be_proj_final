@@ -54,7 +54,7 @@ const GetRestaurants = ({coordinates}) => {
   
   // Returning the JSX code to display the list of restaurants
   return (
-    <div className="p-16 bg-blue-100">
+    <div className="p-16 bg-gray-100">
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
       {restaurants.map((restaurant, index) => (
         <motion.div 

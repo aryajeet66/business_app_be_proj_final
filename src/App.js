@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import Header from './components/Header';
-import Cta from './components/Cta';
-import Footer from './components/Footer';
-import APIpostcode from './components/API_postcode';
-import GetRestaurants from './components/GetRestaurants';
+import {BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Login from './components/LoginForm/Login';
+import Form from './components/LoginForm/Form'
+import Dashboard from './components/LoginForm/Dashboard'
+import Home from './components/Home';
+
 
 function App() {
   const [searchInput, setSearchInput] = useState('');
@@ -14,14 +15,12 @@ function App() {
   };
   return (
     <div className="">
-      <Header onSearchInputChange={handleSearchInputChange} />
-      <Cta />
-      <APIpostcode
-        searchLocation={searchInput}
-        setCoordinatesCallback={setCoordinates}
-      />
-      <GetRestaurants coordinates={coordinates} />
-      <Footer />
+      <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/form" element={<Form />} />
+      <Route path='/home' element={<Home/>} />
+    </Routes>
     </div>
   );
 }

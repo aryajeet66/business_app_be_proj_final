@@ -1,0 +1,123 @@
+.confirmation,
+.locInfo,
+.areaInfo,
+.cInfo,
+.capInfo {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 60px;
+}
+
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  overflow-y: scroll;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  height: 50%;
+  width: 50%;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.text {
+  color: #3c009d;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.inputs {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 480px;
+  height: 80px;
+  background: #eaeaea;
+  border-radius: 6px;
+}
+
+.input input {
+  height: 50px;
+  width: 400px;
+  background: transparent;
+  margin: auto;
+  border: none;
+  outline: none;
+  color: #797979;
+  font-size: 19px;
+}
+
+.imgDrop{
+    width: 20%;
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.nButton,
+.pButton,
+.logoutButton,
+.DownloadButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  width: 220px;
+  height: 59px;
+  color: #fff;
+  background: #9452ef;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hHeader {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 60px;
+  color: #3c009d;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 60px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}

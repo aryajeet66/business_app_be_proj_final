@@ -15,7 +15,6 @@ export default function Header({onSearchInputChange}) {
           
           <div className="pt-2 flex items-center">
           <img src={logo} alt="logo" className='w-16' />
-            <h2 className=' whitespace-nowrap font-bold text-regal-blue'>LettuceDeliver</h2>
           </div>
 
 {/* Search Bar */}
@@ -31,7 +30,7 @@ export default function Header({onSearchInputChange}) {
         className="peer h-full w-full outline-none text-sm text-regal-blue pr-2 bg-clean "
         type="text"
         id="search"
-        placeholder=" I'm Feeling Hungry..."
+        placeholder=" Search the location...."
         onChange={handleInputChange} 
         onSubmit= {handleInputChange}/> 
 
@@ -41,7 +40,7 @@ export default function Header({onSearchInputChange}) {
 
           {/* Menu Items */}
           <div className='space-x-6'>
-            <a href="#" className='hover:text-mint'>About</a>
+            <a href="/" className='hover:text-mint'>Login</a>
             <a href="#" className='hover:text-mint'>Contact</a>
           </div>
           
